@@ -4,10 +4,11 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // ✅ Allow only your Vercel frontend to access the backend
-const allowedOrigins = ['https://mentorxspace.vercel.app'];
+const allowedOrigins = ['https://mentorx-space.vercel.app'];
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: "https://mentorx-space.vercel.app", // my frontend URL
+  methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
 
